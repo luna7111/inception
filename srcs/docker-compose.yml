@@ -1,0 +1,30 @@
+# version: '3' (checkthis)
+
+services:
+  mariadb:
+    # name tag
+    image: mariadb
+
+    ports: host:container # i think??? ¯\_(ツ)_/¯
+    
+    environment: # maybe not???
+    
+    ## TODO...
+    
+  wordpress:
+    # name tag
+    image: wordpress
+
+    ports: host:container # i think??? ¯\_(ツ)_/¯
+
+    environment: # maybe not???
+
+    ## TODO 
+    
+  nginx:
+
+    ## TODO
+    
+volumes:
+  DB_volume:
+  wordpress_volume:
