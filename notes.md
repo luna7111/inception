@@ -2,7 +2,10 @@
 
 - debian version 12!!!
 
-
+mirar esto
+`
+https://wiki.openssl.org/index.php/SSL/TLS_Client
+`
 ## nginx
 
 the `-y` means "asume yes" to apt, so it can be somewhat automated
