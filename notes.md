@@ -2,6 +2,18 @@
 
 - debian version 12!!!
 
+openssl es para hacer el certificado tls (creo que v1.2)  pat
+
+ines hace esto
+```
+RUN mkdir /etc/nginx/certs/ && chmod 777 /etc/nginx/certs && \ # aquí se guardan los certificados
+	openssl req -x509 -nodes -days 365 \ # limite de tiempo (y puede que más cosas)
+  -newkey rsa:2048 -subj #tamaño de la clave# "/C=SP/ST=Spain/L=Madrid/O=42/CN=localhost" \ #info por defecto que necesita la clase ssl
+  -out /etc/nginx/certs/localhost.crt \ # donde se guarda el certificado
+  -keyout /etc/nginx/certs/localhost.key #donde se guarda la clave del certificado
+```
+
+
 mirar esto
 `
 https://wiki.openssl.org/index.php/SSL/TLS_Client
