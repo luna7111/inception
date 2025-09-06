@@ -1,7 +1,7 @@
 FROM debian:bookworm
 
-RUN apt update && apt upgrade -y
-RUN apt install -y php-fpm php7.4 php-mysql mariadb-client
+RUN apt update -y && apt upgrade -y
+RUN apt install -y php-fpm php php-mysql mariadb-client
 
 RUN mkdir /tmp/image-build-files
 
@@ -20,4 +20,3 @@ RUN mv /tmp/image-build-files/wp-cli-phar /usr/local/bin/wp
 RUN rm -r /tmp/image-build-files
 
 EXPOSE 9000
-
