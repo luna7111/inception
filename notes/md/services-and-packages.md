@@ -51,3 +51,5 @@ Donde una web estática recibe una petición del cliente solicitando un arhivo q
 
 PHP es un lenguaje de programación que se usa del lado del servidor, es un lenguaje interpretado.
 Por eso es necesario tenerlo instalado para que wordpress funcione correctamente.
+
+## Contenedor MariaDB
