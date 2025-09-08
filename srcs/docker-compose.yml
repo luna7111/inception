@@ -1,61 +1,61 @@
 services:
 
-#   mariadb:
+  mariadb:
 
-#     image: mariadb
-#     container_name: mariadb
-#     build:
-#       context: ./requirements/mariadb
-#       dockerfile: Dockerfile
+    image: mariadb
+    container_name: mariadb
+    build:
+      context: ./requirements/mariadb
+      dockerfile: Dockerfile
     
-#     env_file: .env
-#     volumes: DB_volume:/var/lib/mysql
-#     networks: docker_network
-#     expose: "3306"
-    
-#     restart: always
-
-  wordpress:
-
-    image: wordpress
-    container_name: wordpress
-    build: requirements/wordpress
-    
-    # volumes:
-    # - "wordpress_volume:/var/www/html"
-    # networks:
-    # - "docker_network"
+    env_file: .env
+    volumes: DB_volume:/var/lib/mysql
+    networks: docker_network
+    expose: "3306"
     
     restart: always
 
-  nginx:
+  # wordpress:
+
+  #   image: wordpress
+  #   container_name: wordpress
+  #   build: requirements/wordpress
     
-    image: nginx
-    container_name: nginx
-    build: requirements/nginx
+  #   # volumes:
+  #   # - "wordpress_volume:/var/www/html"
+  #   # networks:
+  #   # - "docker_network"
+    
+  #   restart: always
 
-    ports:
-      - "80:80"
+  # nginx:
+    
+  #   image: nginx
+  #   container_name: nginx
+  #   build: requirements/nginx
 
-    # volumes:
-    # - "wordpress_volume:/var/www/html"
-    # networks:
-    # - "docker_network"
+  #   ports:
+  #     - "80:80"
 
-    restart: always
+  #   # volumes:
+  #   # - "wordpress_volume:/var/www/html"
+  #   # networks:
+  #   # - "docker_network"
+
+  #   restart: always
     
 
-# volumes:
+volumes:
 
-#   DB_volume:
+  DB_volume:
 
-#     driver: local
+    driver: local
 
 
-#   wordpress_volume:
+  wordpress_volume:
 
-#     driver: local
+    driver: local
 
-# networks:
-#   docker_network:
-#     driver: bridge
+networks:
+  docker_network:
+    driver: bridge
