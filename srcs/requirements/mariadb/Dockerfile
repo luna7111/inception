@@ -7,9 +7,9 @@ RUN apt-get install mariadb-server -y
 RUN rm -rf /var/lib/apt/lists/*
 # Clean APT cache
 
-COPY config/my.cnf /etc/mysql/my.cnf
+COPY ./conf/my.cnf /etc/mysql/my.cnf
 # Copy pre-made config file to /etc/mysql/my.cnf 
-COPY tools/setup.sh /setup.sh
+COPY ./tools/setup.sh /setup.sh
 # Copy entrypoint script to root
 
 RUN chmod +x /setup.sh

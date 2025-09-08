@@ -13,6 +13,9 @@ set -eu
 # some command fails
 # see wizardzines.com/comics/bash-errors
 
+# make sure that dirercories used by mariaDB are owned by it
+mkdir -p /var/lib/mysql
+mkdir -p /run/mysqld
 chown -R mysql:mysql /var/lib/mysql
 chown -R mysql:mysql /run/mysqld
 
@@ -39,7 +42,7 @@ else
 fi
 
 # Shut down temporary daemon
-mysqladmin -u root -p $MARIADB_ROOT_PASSWORD shutdown
+mysqladmin -u root -p$MARIADB_ROOT_PASSWORD shutdown
 
 exec mysqld
 # Exec, executes a program whicc takes the place of the script
