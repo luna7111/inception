@@ -2,6 +2,18 @@
 
 uhhm yeah
 
+
+> NOTAS
+>
+> Mirar mejor lo de PID 1 y exec en el script
+>
+> La base de datos de Wordpress se hace desde el contenedor de mariadb
+>
+> En la configuración de wordpress hay que decirle la base de datos a la que se ba a conectar (address y puerto (adress(mariadb) 3306))
+>
+> La conexión entre servicios en distinos contenedores de una misma red de docker, la adress de los contenedores no es localhost sino el nombre del contenedor
+>
+
 ## Contenedor nginx
 
 Es el servidor web, está chuli
