@@ -38,7 +38,9 @@ echo "Shutting down temporary MariaDB..."
 mysqladmin --socket=/run/mysqld/mysqld.sock -u root -p"${MYSQL_ROOT_PASSWORD}" shutdown
 
 # Wait for shutdown
+echo "Waiting for shutdown (－ω－) zzZ"
 wait "$pid" || true
+echo "Wait finished! ヽ(・ω・)ﾉ"
 
 # Start MariaDB normally (with networking)
 echo "Initialization complete. Starting MariaDB..."
