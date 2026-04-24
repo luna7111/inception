@@ -29,6 +29,8 @@ services:
       - inception-network
     volumes:
       - wordpress_data:/var/www/html
+    env_file:
+      - .env
     environment:
       WORDPRESS_DB_HOST: mariadb
       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
@@ -43,6 +45,9 @@ services:
     build:
       context: requirements/nginx
     image: nginx:inception
+    ports:
+      - "443:443"
+      - "80:80"
     container_name: nginx
     depends_on:
       - wordpress
@@ -77,4 +82,3 @@ secrets:
     file: ../secrets/db_root_password.txt
   db_password:
     file: ../secrets/db_password.txt
-
