@@ -1,4 +1,4 @@
-COMPOSE_FILE = src/docker-compose.yml
+COMPOSE_FILE = srcs/docker-compose.yml
 DATA_DIR = /home/$(USER)/data
 
 .PHONY: all build up down clean fclean re
