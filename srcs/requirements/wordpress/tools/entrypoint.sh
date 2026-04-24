@@ -53,10 +53,24 @@ EOF
     chown -R www-data:www-data "$WP_PATH"
 
     echo "WordPress setup complete."
+    wp core install --allow-root\
+    --url="${DOMAIN_NAME}"\
+    --title="${WORDPRESS_TITLE}"\
+    --admin_user="${WORDPRESS_WEB_ADMIN}"\
+    --admin_password="${WEB_ADMIN_PASWORD}"\
+    --admin_email="${WEB_ADMIN_EMAIL}"\
+    --skip-email
+
+    wp user create --allow-root \
+    $WORDPRESS_WEB_USER \
+    $WEB_USER_EMAIL \
+    --role=author \
+    --user_pass=$WORDPRESS_WEB_USER_PASS \
+    
+
 else
     echo "WordPress already initialized, skipping setup."
 fi
 
 echo "Starting PHP-FPM..."
 exec php-fpm8.2 -F
-
