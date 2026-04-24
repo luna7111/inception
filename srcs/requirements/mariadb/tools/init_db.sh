@@ -22,8 +22,8 @@ until mysqladmin --socket=/run/mysqld/mysqld.sock ping >/dev/null 2>&1; do
 done
 echo "MariaDB is ready!"
 
-db_root_password = $(cat /run/secrets/db_root_password)
-db_password = $(cat /run/secrets/db_password)
+db_root_password=$(cat /run/secrets/db_root_password)
+db_password=$(cat /run/secrets/db_password)
 
 # Run setup SQL: create database and users
 echo "Running setup SQL..."
