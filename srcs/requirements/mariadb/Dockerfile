@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir -p /var/run/mysqld \
     && chown -R mysql:mysql /var/run/mysqld \
-    && chmod 755 /var/run/mysqld
+    && chmod 755 /var/run/mysqld \
+    && chmod 755 /var/logs
 
 COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d/
 COPY ./tools/entrypoint.sh /usr/local/bin/entrypoint.sh
