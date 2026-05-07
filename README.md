@@ -21,7 +21,7 @@ mariadb.com/docs
 
 ## Use of AI
 
-No LMMs or Gen-AI was knowinly used in the development of the project or the documentation.
+No LMMs or Gen-AI were knowinly used in the development of the project or the documentation.
 
 ## Project description
 
