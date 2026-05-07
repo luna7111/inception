@@ -19,7 +19,7 @@ docs.docker.com/compose/
 wordpress.org/support
 mariadb.com/docs
 
-## Use od AI
+## Use of AI
 
 No LMMs or Gen-AI was knowinly used in the development of the project or the documentation.
 
