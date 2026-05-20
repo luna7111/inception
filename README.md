@@ -25,6 +25,15 @@ No LMMs or Gen-AI were knowinly used in the development of the project or the do
 
 ## Project description
 
+The project consists on setting up a small infrastructure composed of the following services and features:
+
+- A Docker container that contains NGINX with TLS.
+- A Docker container that contains WordPress + php-fpm.
+- A Docker container that contains MariaDB.
+- A volume that contains the WordPress database.
+- A second volume that contains the WordPress website files.
+- A docker-network that establishes the connection between your containers.
+
 ### Virtual Machines vs Docker
 
 ### Secrets vs Environment Variables
