@@ -36,7 +36,7 @@ The project consists on setting up a small infrastructure composed of the follow
 
 ### Virtual Machines vs Docker
 
-A virtual machine is a program that emulates hardware's ability to execute an operative system. This is nice to run a hole operative system isolated from the hosdt but it is also resource heavy. Docker containers share the linux kernel with the host machine and only installs and runs the neccesary resources to run their service. Containers provide portability and isolation while remainin reasonably light compared to virtual machines.
+A virtual machine is a program that emulates hardware's ability to execute an operative system. This is nice to run a hole operative system isolated from the host but it is also resource heavy. Docker containers share the linux kernel with the host machine and only installs and runs the neccesary resources to run their service. Containers provide portability and isolation while remaining reasonably light compared to virtual machines.
 
 ### Secrets vs Environment Variables
 
@@ -47,4 +47,10 @@ Environment variables are used in the containters environment as plain text.
 
 ### Docker Network vs Host Network
 
+The host network driver uses the host machine network and its ip address without any port forwarding.
+Docker networks use the bridge network driver which isolates the services from the host network but lets you expose or forward ports.
+
 ### Docker Volumes vs Bind Mounts
+
+Docker volumes are a persistent way to store data in a container, bind mounts are a way to mount a directory from the host to the container.
+Internally both solutions are stored in a direcctory on the host, but Docker volumes are directly managed by Docker, while bind mount host directories remain independent from Docker itself.
