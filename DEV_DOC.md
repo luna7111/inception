@@ -17,11 +17,17 @@ A .env file with the custom environment variables sould be located at `srcs/.env
 
 Database passwords are stored in secrets files `secrets/db_password.txt` and `secrets/db_root_password.txt`
 
-The repository contains a default .env with preset values to be used as reference, DO NOT USE THE DEFAULT VALUES.
+The repository contains a default .env and secret files with preset values to be used as reference, DO NOT USE THE DEFAULT VALUES.
 
 ## Creating the images and containers
 
+The project includes a Makefile with rules to automate image and container management:
 
+- `make up` builds and starts the services
+- `make build` builds the services
+- `make down` stops the containers
+- `make re` rebuilds the containers
+- `make fclean` removes the containers and images
 
 ## Managing images, containers and volumes
 
