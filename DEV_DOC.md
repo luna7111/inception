@@ -31,4 +31,21 @@ The project includes a Makefile with rules to automate image and container manag
 
 ## Managing images, containers and volumes
 
+Here are some useful commands to manage docker images, containers and volumes:
+
+- `docker compose [OPTIONS] COMMAND` defines an runs multi-container applications, the `-f filename` flag sets the compose configuration file:
+  - `docker compose build [OPTIONS] [SERVICE...]` builds the services.
+  - `docker compose build [OPTIONS] [SERVICE...]` creates and starts services.
+  - `docker compose restart [OPTIONS] [SERVICE...]` restarts a service.
+  - `docker compose down [OPTIONS] [SERVICES]` stops and removes containers and/or networks.
+- `docker ps [OPTIONS]` lists containers, the `-a` flag Shows all containers.
+- `docker rm [OPTIONS] CONTAINER [CONTAINER...]` removes containers.
+- `docker rmi [OPTIONS] IMAGE [IMAGE...]` removes images.
+- `docker exec [OPTIONS] CONTAINER COMMAND [ARG...]` executes a command in a running containter, the `-it` flags create a pseudo-tty (`-t`) and leave STDIN open (`-i`) which lets you interact with the container in real time.
+- `docker volume COMMAND` lets you manage volumes:
+  - `inspect` displays detailed information of the volume.
+  - `ls` lists volumes.
+  - `rm` removes the volume.
+- `docker logs [OPTIONS] CONTAINER` fetches the logs of a container.
+
 ## Data stores information
