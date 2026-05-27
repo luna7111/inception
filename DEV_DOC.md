@@ -49,3 +49,5 @@ Here are some useful commands to manage docker images, containers and volumes:
 - `docker logs [OPTIONS] CONTAINER` fetches the logs of a container.
 
 ## Data stores information
+
+Persistent data is stored in named volumes which are mounted to files in `/home/user/data`, there is a `mariadb` and a `wordpress` file.
